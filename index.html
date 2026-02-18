@@ -1,169 +1,352 @@
 <!DOCTYPE html>
+
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Game Hub - Your Gaming Destination</title>
+<title>charktest | Personal Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#3b82f6", // Blue-500
-              secondary: "#f97316", // Orange-500
-              "background-light": "#f1f5f9", // Slate-100
-              "background-dark": "#0B1229", // Custom Dark Blue
-              "surface-dark": "#1E293B", // Slate-800
-              "text-light": "#1e293b", // Slate-800
-              "text-dark": "#f8fafc", // Slate-50
-              "text-muted-dark": "#94a3b8", // Slate-400
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1919e6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111121",
+                        "neutral-800": "#1a1a3a",
+                        "neutral-900": "#0d0d1a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
             },
-            fontFamily: {
-              display: ["Space Grotesk", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              lg: "0.75rem",
-              xl: "1rem",
-              full: "9999px",
-            },
-          },
-        },
-      };
+        }
     </script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
     </style>
 </head>
-<body class="bg-background-dark font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-dark group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-7xl flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-surface-dark px-6 lg:px-10 py-4">
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary selection:text-white">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
 <div class="flex items-center gap-8">
-<a class="flex items-center gap-3 text-text-dark" href="#">
-<span class="material-symbols-outlined text-primary text-4xl">joystick</span>
-<h1 class="text-3xl font-bold leading-tight tracking-[-0.015em]">GameHub</h1>
+<a class="flex items-center gap-2 group" href="#">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-primary transition-colors">charktest</h1>
 </a>
-<nav class="hidden md:flex items-center gap-9">
-<a class="text-text-dark text-lg font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-text-dark text-lg font-medium leading-normal hover:text-primary transition-colors" href="#">All Games</a>
-<a class="text-text-dark text-lg font-medium leading-normal hover:text-primary transition-colors" href="#">New Games</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#contact">Contact</a>
 </nav>
 </div>
-<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
-<label class="flex flex-col min-w-40 !h-11 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-<div class="text-text-muted-dark flex border-none bg-surface-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
-<span class="material-symbols-outlined">search</span>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 text-sm bg-slate-100 dark:bg-neutral-800 border-none rounded-lg focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Search projects..." type="text"/>
 </div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-dark focus:outline-0 focus:ring-0 border-none bg-surface-dark focus:border-none h-full placeholder:text-text-muted-dark px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search Games" value=""/>
-</div>
-</label>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-secondary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-opacity">
-<span class="truncate">Sign Up</span>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
 </button>
+<div class="size-8 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Stylized minimalist avatar for the user charktest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgFxEeJmC9B9oKRmGHnrthCHApcydJvI7axQIxqfJMN2p_s_Ih7ft6Jbw4ZAspTsY5qlheGhUGbSOhh8JkATJIxDC3t3zYPNsNlJMBYFSq7LWAcUeIUSE4hwTrJYvP73g2RflYLHgkUxVCnL2OO7do12VVdbN1x89e9EeWz5RmFwsrSPlLJsz0hiq7l2d_ZERHaaeHNl28wm7oh6NdLhex8cEIGzrbgsqSs99si02pZ08XUiDDQyM0Cs5MRJN2TsFBKAva3BYTRhlz"/>
+</div>
+</div>
+</div>
 </div>
 </header>
-<main class="flex-1">
-<div class="mt-8">
-<div class="flex flex-col gap-4 text-center py-12 px-4">
-<h1 class="text-text-dark text-5xl font-black leading-tight tracking-[-0.033em] md:text-7xl">Play Fun and Addictive Browser Games</h1>
-<p class="text-text-muted-dark text-xl font-normal leading-normal max-w-3xl mx-auto">Jump into action with unblocked HTML5 games—no download needed! BTW This is from Humaidh</p>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Tabs Navigation -->
+<div class="flex items-center gap-8 border-b border-slate-200 dark:border-primary/10 mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+<a class="flex items-center gap-2 px-1 py-4 border-b-2 border-primary text-primary font-semibold" href="#">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+                Overview
+            </a>
 </div>
-<div class="py-12">
-<div class="flex justify-between items-center px-4 mb-8">
-<h3 class="text-4xl font-bold text-text-dark">Popular Games</h3>
-<a class="text-primary text-lg font-medium hover:underline" href="#">View All</a>
+<!-- Projects Grid Section -->
+<section class="space-y-6" id="projects">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project Card 1 -->
+<div class="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl dark:hover:shadow-primary/5">
+<div class="aspect-video w-full bg-slate-100 dark:bg-neutral-800 overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white text-sm font-medium">Click to view source</span>
 </div>
-<div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8 p-4">
-<a class="flex flex-col gap-4 group" href="https://UBGameHub.github.io/0001">
-<div class="bg-cover bg-center rounded-xl aspect-video overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="A warrior stands on a cliff overlooking a vast fantasy landscape for the game Odyssey" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4e3Da1z3GJ2cKLGXW5oBgQM_mPefFsIdApezHXDQ8ClT1EhV3mfiGQJVt8hgqIoL9yEjxZwQxGbj-E_7rGdti4tt6XRpTTyQBzZ17YvA6G6CJwWl5lXJhP7yoQfJZ7WiNmIGSNTyZtG9-Lga2M-5Xr4g8hkAISMk-hcheccEzkOlKz_FUY2hCzP2iOSutU_t3yc6bj59TmnnbvnwZdDyznJP_PY0KLucyOq0CtaAbjz_F8PQER6njPMmp3kD-nmly8Is5yE3yH-Rv");'></div>
-<div class="flex flex-col gap-1">
-<p class="text-text-dark text-2xl font-bold leading-tight line-clamp-1">Slip</p>
-<p class="text-text-muted-dark text-base">Rotate the coloured circle.</p>
+<div class="w-full h-full bg-gradient-to-br from-primary/20 to-indigo-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-primary/40">smart_toy</span>
 </div>
-</a>
-<a class="flex flex-col gap-4 group" href="#">
-<div class="bg-cover bg-center rounded-xl aspect-video overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="An abstract representation of complex puzzles and code for the game Cipher" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB83BFxKFY9fSYi5ZGJIefZ9_Mf3pvDioZQ-e0AVskaTD49i9VMPLDyq2URID1kyWbdBWUPT7_hUjt31KGcNeERqTMobxUH_zNLkMcu3QhbQRTANy3MBVr3D5s36ONZK2tVzCx-eHbLAAiT9z1QTLc-9X3qtwmLYvq9wHrPIL3dn1L-lafR2rZ2meXjun-Rbn5S6wvSQOwYAojL2jPKzorRKBRwzmnvLF4nN0xTVpgFxeqNCUO7xzlDaHojxPEO_34Z1DgcUlCrvOab");'></div>
-<div class="flex flex-col gap-1">
-<p class="text-text-dark text-2xl font-bold leading-tight line-clamp-1">Cipher</p>
-<p class="text-text-muted-dark text-base">Solve mind-bending puzzles.</p>
 </div>
-</a>
-<a class="flex flex-col gap-4 group" href="#">
-<div class="bg-cover bg-center rounded-xl aspect-video overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="A futuristic spaceship flying through a nebula for the game Nova" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNU2B_skGAKbQrLYrKlXxKv5sDSD6A6G0BIBNTERN81064PspLI0sba5H-3rLCP7tP30LdYMz-BCJhDES6-JbeGFUh6s2Po7BMxIEKEwOzZ9acOkeoT0RsuEW0WH3iDv_GN7rddQg8eak0XeQp5eO208Rq0fdV5Wle5x2sk_QFIB_czoQEpbxh0JIuPzobkYaYyOzDkOaIORUsPECu_USfvRSibsioj30IBGNbNbTNQdwy8gRgDYxPmU5Zf6t8XePmYV9rq64VKLVX");'></div>
-<div class="flex flex-col gap-1">
-<p class="text-text-dark text-2xl font-bold leading-tight line-clamp-1">Nova</p>
-<p class="text-text-muted-dark text-base">Conquer the galaxy.</p>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-start justify-between mb-2">
+<h4 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Slip</h4>
+<span class="material-symbols-outlined text-slate-400">open_in_new</span>
 </div>
-</a>
-<a class="flex flex-col gap-4 group" href="#">
-<div class="bg-cover bg-center rounded-xl aspect-video overflow-hidden transform group-hover:scale-105 transition-transform duration-300" data-alt="A stylized image of a mountain peak for the game Apex" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZa3xpyRy5zBvKUHyKPjuig1fzDysS8_DDg9nLGSVxod1Cipjt_4KhFSMirRvAoRf1M0olB8UGbXDnGC5NecFAHv5cvsnAPZDHc9W5XeELDZ25sYM5C_bN76IO4H0dCINGMy7ihnVUjByjURVWnu-IGiVnmxTS8-BremfKfKZfygZ7N8AS3oeGDNO8EPe3k5LyldNPIoZTU1Q6w5GE8sJDP1qzbumYCfnBFSSKANAX71hM75lsNPnP8UU-cVa8uV72sLsAI7U6TuuY");'></div>
-<div class="flex flex-col gap-1">
-<p class="text-text-dark text-2xl font-bold leading-tight line-clamp-1">Apex</p>
-<p class="text-text-muted-dark text-base">Reach the ultimate challenge.</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">
+                            An addictive browser game. Use arrows ← → or touch the sides of screen on mobile
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="size-2 rounded-full bg-orange-500"></span> Scratch
+                                </span>
 </div>
-</a>
-<a class="flex flex-col gap-4 group" href="#">
-<div class="bg-cover bg-center rounded-xl aspect-video overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEKnn3Ao-dIh-xD8Y88iJZKflAhGZeib5EE-VDKQ_Th5Tect5EBUDAo0NUbj9MWoHCDN5ZS7IbZdzg6idAh1SEZpb4nosSc-44ipDURnLDrashz_o6l8ClgVmIEVDYACRQtrSKfIH3_NBMIZpqH5rYWCcLkNCH3JbpEkXRIoWcCEJdEK_P5ySeLbjNMM9PiiyzCoQffQUTzPeqVD5e4JQbbk67d3O7Xai1vkSPaziLAYJjsbtcQ-uMm4nMahUkwW1ziDlO6IVlcAMm")'></div>
-<div class="flex flex-col gap-1">
-<p class="text-text-dark text-2xl font-bold leading-tight line-clamp-1">Slipstream</p>
-<p class="text-text-muted-dark text-base">High-speed futuristic racing.</p>
-</div>
-</a>
-<a class="flex flex-col gap-4 group" href="#">
-<div class="bg-cover bg-center rounded-xl aspect-video overflow-hidden transform group-hover:scale-105 transition-transform duration-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrC53p62QkiNHOyTpNISli_mYvAmJ3JvXOwhi3QwjGH9V1kdfK-Muo9ip9128RVvmwxGspl-Fllxd2Oq-1y1uwhoeOGuqsNB4aOeudEWN93ObQ_6iNOdhTFJrwWXEK0S-heihGoCpEm1pMv6wgx9cgUPqMlfJoTcTdxm99WfgI9ZoLBZG5SH6S270xSSdHfzz8zitA62jbamGvt6WvpnxXk1AtKRzI6F_U4894_nT8gh-hZdtDKhuFGq7527Qa15dW3deynAsMCXlJ")'></div>
-<div class="flex flex-col gap-1">
-<p class="text-text-dark text-2xl font-bold leading-tight line-clamp-1">Block Builders</p>
-<p class="text-text-muted-dark text-base">Create amazing structures.</p>
-</div>
-</a>
+<a class="text-xs font-bold uppercase tracking-wider text-primary py-1 px-3 rounded bg-primary/10 hover:bg-primary hover:text-white transition-all" href="https://example.com/project-1">Explore</a>
 </div>
 </div>
 </div>
+<!-- Project Card 2 -->
+<div class="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl dark:hover:shadow-primary/5">
+<div class="aspect-video w-full bg-slate-100 dark:bg-neutral-800 overflow-hidden relative">
+<div class="w-full h-full bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-emerald-500/40">monitoring</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-start justify-between mb-2">
+<h4 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Crypto Dashboard</h4>
+<span class="material-symbols-outlined text-slate-400">open_in_new</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">
+                            Real-time cryptocurrency tracking and analytics with advanced charting and multi-exchange integration.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="size-2 rounded-full bg-cyan-500"></span> React
+                                </span>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">star</span> 850
+                                </span>
+</div>
+<a class="text-xs font-bold uppercase tracking-wider text-primary py-1 px-3 rounded bg-primary/10 hover:bg-primary hover:text-white transition-all" href="https://example.com/project-2">Explore</a>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl dark:hover:shadow-primary/5">
+<div class="aspect-video w-full bg-slate-100 dark:bg-neutral-800 overflow-hidden relative">
+<div class="w-full h-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-orange-500/40">rocket_launch</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-start justify-between mb-2">
+<h4 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Portfolio Starter</h4>
+<span class="material-symbols-outlined text-slate-400">open_in_new</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">
+                            A high-performance, SEO-optimized starter template for developer portfolios built with Next.js and Tailwind CSS.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="size-2 rounded-full bg-white border border-slate-300"></span> Next.js
+                                </span>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">star</span> 2.1k
+                                </span>
+</div>
+<a class="text-xs font-bold uppercase tracking-wider text-primary py-1 px-3 rounded bg-primary/10 hover:bg-primary hover:text-white transition-all" href="https://example.com/project-3">Explore</a>
+</div>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl dark:hover:shadow-primary/5">
+<div class="aspect-video w-full bg-slate-100 dark:bg-neutral-800 overflow-hidden relative">
+<div class="w-full h-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-indigo-500/40">shopping_cart</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-start justify-between mb-2">
+<h4 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">E-commerce API</h4>
+<span class="material-symbols-outlined text-slate-400">open_in_new</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">
+                            Scalable RESTful API for modern e-commerce storefronts with built-in inventory management and Stripe integration.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="size-2 rounded-full bg-sky-500"></span> Go
+                                </span>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">star</span> 400
+                                </span>
+</div>
+<a class="text-xs font-bold uppercase tracking-wider text-primary py-1 px-3 rounded bg-primary/10 hover:bg-primary hover:text-white transition-all" href="https://example.com/project-4">Explore</a>
+</div>
+</div>
+</div>
+<!-- Project Card 5 -->
+<div class="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl dark:hover:shadow-primary/5">
+<div class="aspect-video w-full bg-slate-100 dark:bg-neutral-800 overflow-hidden relative">
+<div class="w-full h-full bg-gradient-to-br from-gray-500/20 to-slate-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-slate-500/40">edit_note</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-start justify-between mb-2">
+<h4 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Markdown Editor</h4>
+<span class="material-symbols-outlined text-slate-400">open_in_new</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">
+                            Browser-based markdown editor with real-time preview, YAML frontmatter support, and GitHub sync capabilities.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="size-2 rounded-full bg-orange-700"></span> Rust
+                                </span>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">star</span> 920
+                                </span>
+</div>
+<a class="text-xs font-bold uppercase tracking-wider text-primary py-1 px-3 rounded bg-primary/10 hover:bg-primary hover:text-white transition-all" href="https://example.com/project-5">Explore</a>
+</div>
+</div>
+</div>
+<!-- Project Card 6 -->
+<div class="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl dark:hover:shadow-primary/5">
+<div class="aspect-video w-full bg-slate-100 dark:bg-neutral-800 overflow-hidden relative">
+<div class="w-full h-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-yellow-500/40">cloud</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-start justify-between mb-2">
+<h4 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-primary transition-colors">Weather App</h4>
+<span class="material-symbols-outlined text-slate-400">open_in_new</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-2">
+                            Hyper-local weather forecasts with interactive satellite maps and severe weather alert notifications.
+                        </p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="size-2 rounded-full bg-yellow-400"></span> JavaScript
+                                </span>
+<span class="flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">star</span> 310
+                                </span>
+</div>
+<a class="text-xs font-bold uppercase tracking-wider text-primary py-1 px-3 rounded bg-primary/10 hover:bg-primary hover:text-white transition-all" href="https://example.com/project-6">Explore</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contribution Graph Section (Simulation) -->
+<section class="mt-16 space-y-6" id="about">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Contributions</h3>
+<div class="p-6 bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-x-auto">
+<div class="flex flex-col gap-2 min-w-[700px]">
+<div class="flex gap-1 justify-end">
+<div class="flex gap-1">
+<div class="size-3 rounded-sm bg-slate-100 dark:bg-neutral-800"></div>
+<div class="size-3 rounded-sm bg-primary/20"></div>
+<div class="size-3 rounded-sm bg-primary/40"></div>
+<div class="size-3 rounded-sm bg-primary/60"></div>
+<div class="size-3 rounded-sm bg-primary"></div>
+</div>
+<span class="text-[10px] text-slate-400 self-center ml-2">Less · More</span>
+</div>
+<div class="grid grid-flow-col grid-rows-7 gap-1">
+<!-- Simulated Grid Squares -->
+<div class="size-3 rounded-sm bg-primary/40"></div>
+<div class="size-3 rounded-sm bg-primary/10"></div>
+<div class="size-3 rounded-sm bg-primary/60"></div>
+<div class="size-3 rounded-sm bg-slate-100 dark:bg-neutral-800"></div>
+<div class="size-3 rounded-sm bg-primary/20"></div>
+<div class="size-3 rounded-sm bg-primary/10"></div>
+<div class="size-3 rounded-sm bg-primary/40"></div>
+<!-- ... 50 more squares omitted for brevity but visual pattern remains ... -->
+<!-- Repeat pattern for visual density -->
+<script>
+                            const grid = document.currentScript.parentElement;
+                            const colors = ['bg-slate-100 dark:bg-neutral-800', 'bg-primary/20', 'bg-primary/40', 'bg-primary/60', 'bg-primary'];
+                            for(let i=0; i<350; i++) {
+                                const div = document.createElement('div');
+                                div.className = `size-3 rounded-sm ${colors[Math.floor(Math.random() * colors.length)]}`;
+                                grid.appendChild(div);
+                            }
+                        </script>
+</div>
+</div>
+<p class="mt-4 text-xs text-slate-500 dark:text-slate-400 italic">456 contributions in the last year</p>
+</div>
+</section>
 </main>
-<footer class="flex flex-col gap-8 px-5 py-12 text-center @container border-t border-solid border-t-surface-dark mt-16">
-<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 @[480px]:flex-row @[480px]:justify-around">
-<a class="text-text-muted-dark text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="text-text-muted-dark text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="text-text-muted-dark text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Contact Us</a>
-<a class="text-text-muted-dark text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Parents</a>
+<!-- Footer -->
+<footer class="mt-20 border-t border-slate-200 dark:border-primary/10 bg-white dark:bg-neutral-900/50" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2 space-y-4">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">terminal</span>
 </div>
-<div class="flex flex-wrap justify-center gap-8 text-3xl">
-<a href="#">
-<div class="text-text-muted-dark hover:text-primary transition-colors">
-<svg fill="currentColor" height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
-<path d="M22.46 6c-.77.35-1.6.58-2.46.67c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94c0 1.49.76 2.81 1.91 3.56c-.71 0-1.37-.22-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"></path>
-</svg>
+<span class="font-bold text-lg text-slate-900 dark:text-white">charktest</span>
 </div>
+<p class="text-slate-500 dark:text-slate-400 text-sm max-w-sm">
+                        Building tools that empower developers to create more with less code. Always open to collaborations and interesting projects.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
 </a>
-<a href="#">
-<div class="text-text-muted-dark hover:text-primary transition-colors">
-<svg fill="currentColor" height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96c0 4.86 3.45 8.92 8.01 9.8v-7H7.9v-2.8h2.15V9.95c0-2.12 1.25-3.3 3.18-3.3c.9 0 1.85.17 1.85.17v2.4H13.8c-1.03 0-1.38.62-1.38 1.32v1.6h2.77l-.44 2.8H12.42v7.01c4.56-.88 8.01-4.94 8.01-9.81C21.96 6.5 17.5 2.04 12 2.04Z"></path>
-</svg>
-</div>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
 </a>
-<a href="#">
-<div class="text-text-muted-dark hover:text-primary transition-colors">
-<svg fill="currentColor" height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm4.6 3a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Zm6.2-3a1.2 1.2 0 1 1 0 2.4a1.2 1.2 0 0 1 0-2.4Z"></path>
-</svg>
-</div>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
 </a>
 </div>
-<p class="text-text-muted-dark text-base font-normal leading-normal">© 2023 FunZone Games. All rights reserved.</p>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider">Resources</h5>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Style Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Tech Stack</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-wider">Connect</h5>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">GitHub Profile</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Twitter / X</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-primary/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500 dark:text-slate-400">© 2024 charktest. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
 </footer>
-</div>
-</div>
-</div>
-</div>
 </body></html>
-
