@@ -3,7 +3,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>charktest (HUMAIDH)</title>
+<title>charktest | Personal Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -256,6 +256,46 @@
 </div>
 </div>
 </div>
+</div>
+</section>
+<!-- Contribution Graph Section (Simulation) -->
+<section class="mt-16 space-y-6" id="about">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Contributions</h3>
+<div class="p-6 bg-white dark:bg-neutral-900/50 border border-slate-200 dark:border-primary/10 rounded-xl overflow-x-auto">
+<div class="flex flex-col gap-2 min-w-[700px]">
+<div class="flex gap-1 justify-end">
+<div class="flex gap-1">
+<div class="size-3 rounded-sm bg-slate-100 dark:bg-neutral-800"></div>
+<div class="size-3 rounded-sm bg-primary/20"></div>
+<div class="size-3 rounded-sm bg-primary/40"></div>
+<div class="size-3 rounded-sm bg-primary/60"></div>
+<div class="size-3 rounded-sm bg-primary"></div>
+</div>
+<span class="text-[10px] text-slate-400 self-center ml-2">Less · More</span>
+</div>
+<div class="grid grid-flow-col grid-rows-7 gap-1">
+<!-- Simulated Grid Squares -->
+<div class="size-3 rounded-sm bg-primary/40"></div>
+<div class="size-3 rounded-sm bg-primary/10"></div>
+<div class="size-3 rounded-sm bg-primary/60"></div>
+<div class="size-3 rounded-sm bg-slate-100 dark:bg-neutral-800"></div>
+<div class="size-3 rounded-sm bg-primary/20"></div>
+<div class="size-3 rounded-sm bg-primary/10"></div>
+<div class="size-3 rounded-sm bg-primary/40"></div>
+<!-- ... 50 more squares omitted for brevity but visual pattern remains ... -->
+<!-- Repeat pattern for visual density -->
+<script>
+                            const grid = document.currentScript.parentElement;
+                            const colors = ['bg-slate-100 dark:bg-neutral-800', 'bg-primary/20', 'bg-primary/40', 'bg-primary/60', 'bg-primary'];
+                            for(let i=0; i<350; i++) {
+                                const div = document.createElement('div');
+                                div.className = `size-3 rounded-sm ${colors[Math.floor(Math.random() * colors.length)]}`;
+                                grid.appendChild(div);
+                            }
+                        </script>
+</div>
+</div>
+<p class="mt-4 text-xs text-slate-500 dark:text-slate-400 italic">456 contributions in the last year</p>
 </div>
 </section>
 </main>
